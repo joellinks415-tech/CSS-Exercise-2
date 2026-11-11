@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 2rem 5%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+/* 1. Flexbox for Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #fff;
+    color: #555;
+    border: 2px solid #ddd;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for interaction states */
+}
+
+/* Active State for Filter Buttons */
+.btn:hover, .btn.active {
+    background-color: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* 2. CSS Grid for Main Gallery Layout & Responsive Breakpoints */
+.gallery-grid {
+    display: grid;
+    gap: 2rem;
+    transition: all 0.4s ease-in-out; /* Smooth transition between layout shifts */
+}
+
+/* Responsive Grid Columns Setup */
+/* Desktop Default: 4 columns */
+@media (min-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 599px) {
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* 3. CSS Grid for Card Internal Layouts */
+.gallery-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Filtering animations & interaction transitions */
+    opacity: 1;
+}
+
+/* Card Image Setup */
+.gallery-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card Text Content Area */
+.card-content {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #222;
+}
+
+/* Description Card Overlay */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.9);
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Interactive Hover Effects on Cards */
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-card:hover .card-overlay {
+    opacity: 1;
+    visibility: visible;
+}
