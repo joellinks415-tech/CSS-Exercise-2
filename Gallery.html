@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Filterable Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Dynamic Image Gallery</h1>
+        <!-- Flexbox Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="btn active" onclick="filterGallery('all')">All</button>
+            <button class="btn" onclick="filterGallery('landscapes')">Landscapes</button>
+            <button class="btn" onclick="filterGallery('portraits')">Portraits</button>
+            <button class="btn" onclick="filterGallery('architecture')">Architecture</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- CSS Grid Main Gallery Layout (12 Images) -->
+        <div class="gallery-grid">
+            
+            <!-- Card 1: Landscapes -->
+            <div class="gallery-card landscapes">
+                <img src="https://unsplash.com" alt="Mountain Lake">
+                <div class="card-content">
+                    <span class="category-tag">Landscapes</span>
+                    <h3 class="card-title">Mountain Lake</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">A serene view of a mountain reflecting perfectly over a crystal-clear lake during golden hour.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Portraits -->
+            <div class="gallery-card portraits">
+                <img src="https://unsplash.com" alt="Studio Portrait">
+                <div class="card-content">
+                    <span class="category-tag">Portraits</span>
+                    <h3 class="card-title">Studio Portrait</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">A deep, expressive close-up studio portrait highlighting dramatic lighting and texture.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Architecture -->
+            <div class="gallery-card architecture">
+                <img src="https://unsplash.com" alt="Modern Villa">
+                <div class="card-content">
+                    <span class="category-tag">Architecture</span>
+                    <h3 class="card-title">Modern Villa</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">Sleek lines and sustainable materials define this contemporary residential architectural design.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Landscapes -->
+            <div class="gallery-card landscapes">
+                <img src="https://unsplash.com" alt="Misty Forest">
+                <div class="card-content">
+                    <span class="category-tag">Landscapes</span>
+                    <h3 class="card-title">Misty Forest</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">Eerie and beautiful fog weaving through ancient evergreen trees at dawn.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Portraits -->
+            <div class="gallery-card portraits">
+                <img src="https://unsplash.com" alt="Candid Smile">
+                <div class="card-content">
+                    <span class="category-tag">Portraits</span>
+                    <h3 class="card-title">Candid Smile</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">An authentic, joyous moment captured naturally in an outdoor street setting.</p>
+                </div>
+            </div>
+
+            <!-- Card 6: Architecture -->
+            <div class="gallery-card architecture">
+                <img src="https://unsplash.com" alt="Gothic Cathedral">
+                <div class="card-content">
+                    <span class="category-tag">Architecture</span>
+                    <h3 class="card-title">Gothic Cathedral</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">Stunning towering spires and intricate stone details showcasing timeless Gothic architecture.</p>
+                </div>
+            </div>
+
+            <!-- Card 7: Landscapes -->
+            <div class="gallery-card landscapes">
+                <img src="https://unsplash.com" alt="Wooden Boardwalk">
+                <div class="card-content">
+                    <span class="category-tag">Landscapes</span>
+                    <h3 class="card-title">Wooden Boardwalk</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">A path leading deep into a lush green woodland reserve under dappled sunlight.</p>
+                </div>
+            </div>
+
+            <!-- Card 8: Portraits -->
+            <div class="gallery-card portraits">
+                <img src="https://unsplash.com" alt="Monochrome Profile">
+                <div class="card-content">
+                    <span class="category-tag">Portraits</span>
+                    <h3 class="card-title">Monochrome Profile</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">A dramatic black and white high-contrast side profile focusing on form and shadow.</p>
+                </div>
+            </div>
+
+            <!-- Card 9: Architecture -->
+            <div class="gallery-card architecture">
+                <img src="https://unsplash.com" alt="Skyscraper Grid">
+                <div class="card-content">
+                    <span class="category-tag">Architecture</span>
+                    <h3 class="card-title">Skyscraper Grid</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">A look straight up into towering glass skyscrapers reflecting the blue sky.</p>
+                </div>
+            </div>
+
+            <!-- Card 10: Landscapes -->
+            <div class="gallery-card landscapes">
+                <img src="https://unsplash.com" alt="Desert Canyons">
+                <div class="card-content">
+                    <span class="category-tag">Landscapes</span>
+                    <h3 class="card-title">Desert Canyons</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">Layered red rock formations carved over millennia under an expansive desert sky.</p>
+                </div>
+            </div>
+
+            <!-- Card 11: Portraits -->
+            <div class="gallery-card portraits">
+                <img src="https://unsplash.com" alt="Neon Neon Glow">
+                <div class="card-content">
+                    <span class="category-tag">Portraits</span>
+                    <h3 class="card-title">Neon Glow</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">A vibrant portrait illuminated by neon cyberpunk night lights in the city.</p>
+                </div>
+            </div>
+
+            <!-- Card 12: Architecture -->
+            <div class="gallery-card architecture">
+                <img src="https://unsplash.com" alt="Minimalist Interior">
+                <div class="card-content">
+                    <span class="category-tag">Architecture</span>
+                    <h3 class="card-title">Minimalist Space</h3>
+                </div>
+                <div class="card-overlay">
+                    <p class="overlay-desc">An indoor architectural design exploring pure geometry, shadows, and natural wood tones.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Optional short JavaScript snippet to handle interactive layout filtering -->
+    <script>
+        function filterGallery(category) {
+            const cards = document.querySelectorAll('.gallery-card');
+            const buttons = document.querySelectorAll('.btn');
+            
+            // Handle Active Button State
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase() === category || (category === 'all' && btn.textContent === 'All')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Handle card visibility transitions
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'grid';
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300); // matches CSS transition duration
+                }
+            });
+        }
+    </script>
+</body>
+</html>
